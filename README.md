@@ -18,7 +18,7 @@ composer require m1guelpf/laraccess-api
 
 ## Usage
 
-You must pass a Guzzle client and the API token to the constructor of `M1guelpf\LaraccessApi\Laraccess`.
+You must pass a the API token to the constructor of `M1guelpf\LaraccessApi\Laraccess`.
 
 ``` php
 $laraccess = new \M1guelpf\LaraccessApi\Laraccess('YOUR_LARACCESS_API_TOKEN');
@@ -37,34 +37,74 @@ $laraccess->connect('YOUR_LARACCESS_API_TOKEN');
 $laraccess->getUser();
 ```
 
-### Get User Orgs
+### Create User
 ``` php
-$laraccess->getOrgs();
+$laraccess->createUser($user);
 ```
 
-### Get Org info
+### Edit User
 ``` php
-$laraccess->getOrg('ORG_ID');
+$laraccess->editUser($user);
 ```
 
-### Change Org Password
+### Delete User
 ``` php
-$laraccess->changeOrgPassword('ORG_ID', 'NEW_PASSWORD');
+$laraccess->deleteUser();
 ```
 
-### Update Org
+### Get User Campaigns
 ``` php
-$laraccess->updateOrg('ORG_ID');
+$laraccess->getUserCampaigns();
 ```
 
-### Delete Org
+### Get Campaign
 ``` php
-$laraccess->deleteOrg('ORG_ID');
+$laraccess->getCampaign($id);
 ```
 
-### Get Stats
+### Create Campaign
 ``` php
-$laraccess->getStats();
+$laraccess->createCampaign($campaign);
+```
+
+### Edit Campaign
+``` php
+$laraccess->editCampaign($id, $campaign);
+```
+
+### Delete Campaign
+``` php
+$laraccess->deleteCampaign($id);
+```
+
+### Get Campaign Leads
+``` php
+$laraccess->getCampaignLeads($id);
+```
+
+### Get Lead
+``` php
+$laraccess->getLead($id);
+```
+
+### Create Lead
+``` php
+$laraccess->createLead($id, $lead);
+```
+
+### Edit Lead
+``` php
+$laraccess->editLead($id, $lead);
+```
+
+### Delete Lead
+``` php
+$laraccess->deleteLead($id, $lead);
+```
+
+### Invite Lead
+``` php
+$laraccess->inviteLead($id);
 ```
 
 ### Renenerate Token
