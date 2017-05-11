@@ -107,7 +107,7 @@ class Laraccess
     /**
      * @return array
      */
-    public function getUserCcampaigns()
+    public function getUserCampaigns()
     {
         return $this->get('/user/campaigns');
     }
@@ -218,7 +218,7 @@ class Laraccess
     /**
      * @param bool $set
      *
-     * @return string
+     * @return $this
      */
     public function regenerateToken($set = true)
     {
